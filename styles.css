@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --gray-placeholder: hsl(184, 14%, 56%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(189, 41%, 97%);
+  --btn-initial: rgb(13,104,109);
+}
+
+body {
+  background-color: var(--light-grayish-cyan);
+  font-family: "Space Mono", monospace;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#title {
+    color: var(--very-dark-cyan);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-top: 90px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  border-radius: 22px;
+  margin: 37px auto;
+  width: 625px;
+  padding: 23px 30px 23px 30px;
+}
+
+.right-container {
+    width: 50%;
+    background-color: var(--very-dark-cyan);
+    border-radius: 10px;
+    height: 290px;
+}
+
+.item-input {
+    margin-bottom: 22px;
+}
+
+ul {
+    list-style: none;
+    margin-block-start: 0;
+    padding-inline-start: 0px;
+    margin-inline-end: 0;
+    padding-inline-end: 0;
+}
+.container{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+}
+
+h2, h3 {
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.item {
+    color: var(--dark-grayish-cyan);
+}
+
+.amount, h3{
+    padding-left: 10px;
+    color: var(--light-gray);
+}
+
+h3 {
+    margin: 0px;
+    font-size: 9px;
+    color: var(--light-grayish-cyan);
+}
+ 
+
+label {
+  position: relative;
+}
+
+label:before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  
+}
+.bill-label:before{
+  background: url("./images/icon-dollar.svg")
+    center / contain no-repeat;
+    background-size: 41%;
+}
+
+.people-label:before {
+  background: url("./images/icon-person.svg")
+    center / contain no-repeat;
+    background-size: 49%;
+}
+
+.percent-value{
+    background-color: var(--very-dark-cyan);
+    margin: 0px 10px 10px 0px ;
+    width:64px;
+    text-align: center;
+    padding: 5px 11px 5px 11px;
+    color: var(--white);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 700;
+}
+.percent-value-active {
+    color: var(--very-dark-cyan);
+    background-color: var(--strong-cyan);
+}
+
+.percent-value:hover , .reset-btn:hover{
+    color: var(--very-dark-cyan);
+    background-color: rgb(159,232,223);
+}
+
+input {
+  padding: 6px 10px;
+  border: none;
+  background-color: var(--light-gray);
+  border-radius: 3px;
+  color: var(--very-dark-cyan);
+  font-weight: 700;
+  font-size: 17px;
+  font-family: "Space Mono", monospace;  
+  direction: RTL; 
+  width: 89%;
+}
+input:focus {
+  outline: none !important;
+  border: 2px solid var(--strong-cyan);
+}
+
+.right-first-container, .right-second-container {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 15px;
+    justify-content: space-between;
+}
+
+.money-value {
+    display: flex;
+    margin-right: 33px;
+    align-items: center;
+    position: relative;
+}
+
+
+.price-value {
+  color: var(--strong-cyan);
+  font-size: 35px;
+}
+.dollar-sign {
+  position: absolute;
+  
+}
+
+.reset-btn {
+    width: 82%;
+    border-radius: 6px;
+    margin: 77px 0px 10px 27px;
+    border: none;
+    font-weight: 700;
+    font-family: inherit;
+    font-size: 15px;
+    padding: 8px 0px 8px 0px;
+    background-color: var(--btn-initial);
+    color: var(--very-dark-cyan);
+    cursor: pointer;
+}
+
+/* hide arrows from input number*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* change color of input place holder*/
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:var(--gray-placeholder);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:var(--gray-placeholder);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color:var(--gray-placeholder);
+  }
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+#custom-value{
+    margin: 0px;
+    padding: 5px 11px 5px 11px;
+    width:64px;
+}
