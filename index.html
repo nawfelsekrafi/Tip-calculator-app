@@ -27,26 +27,30 @@
         <section class="item-input">
           <h2 class="item">Bill</h2>
           <label class="bill-label">
-            <input type="number" placeholder="0" />
+            <input type="number" placeholder="0" id="bill-value"/>
           </label>
         </section>
         <section class="item-input">
           <h2 class="item">Select Tip %</h2>
           <ul class="container">
-            <li class="percent-value">5%</li>
-            <li class="percent-value">10%</li>
-            <li class="percent-value">15%</li>
-            <li class="percent-value">25%</li>
-            <li class="percent-value">50%</li>
-            <li class="percent-value" style="padding:0px">
+            <li class="percent-value" value="5">5%</li>
+            <li class="percent-value" value="10">10%</li>
+            <li class="percent-value" value="15">15%</li>
+            <li class="percent-value" value="25">25%</li>
+            <li class="percent-value" value="50">50%</li>
+            <li class="percent-value" value="custom" style="padding:0px">
               <input type="number" id="custom-value" placeholder="Custom">
             </li>
           </ul>
         </section>
         <section class="item-input">
-          <h2 class="item">Number of People</h2>
+          <div>
+            <h2 class="item">Number of People</h2>
+            <h2 class="item" id="zero">Can't be zero</h2>
+          </div>
+   
           <label class="people-label">
-            <input type="number" placeholder="0" />
+            <input type="number" placeholder="0" id="nb-people" class="nb-people"/>
           </label>
         </section>
       </section>
@@ -71,14 +75,16 @@
             <h3 id="total-price" class="price-value">0.00</h3>
           </div>
         </section>
-        <button class="reset-btn">RESET</button>
+        <button class="reset-btn" id="reset-btn">RESET</button>
       </section>
     </main>
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="https://www.linkedin.com/in/nawfel-sekrafi-874167172/" target="_blanck">Nawfel Sekrafi</a>.
     </footer>
+
+    <script src="./main.js"></script>
   </body>
 </html>
